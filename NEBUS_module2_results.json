@@ -1,0 +1,224 @@
+{
+  "geometric_CAD_measurements": {
+    "site": "Gale Crater (site approximation)",
+    "lat": -4.59,
+    "lon_east": 137.44,
+    "dome_radii_m": [
+      1.118034,
+      1.046336,
+      1.037965
+    ],
+    "dome_projected_area_m2": 3.9269908960171462,
+    "six_legs": 6,
+    "footpads": 6
+  },
+  "proposed_material_stacks": {
+    "dome": [
+      {
+        "layer": "outer",
+        "material": "fused silica",
+        "function": "transparent/outer protection"
+      },
+      {
+        "layer": "middle",
+        "material": "12 wt% synthetic melanin + 8 wt% graphene oxide + 80 wt% H-UHMWPE",
+        "function": "radiation/photothermal composite"
+      },
+      {
+        "layer": "inner",
+        "material": "silica aerogel",
+        "function": "thermal insulation"
+      }
+    ],
+    "leg": [
+      {
+        "layer": "exterior",
+        "material": "titanium alloy (Ti-6Al-4V)",
+        "function": "structural skin"
+      },
+      {
+        "layer": "middle",
+        "material": "B-UHMWPE + graphene oxide",
+        "function": "proposed shield insert"
+      },
+      {
+        "layer": "interior",
+        "material": "titanium alloy (Ti-6Al-4V)",
+        "function": "inner structure"
+      },
+      {
+        "layer": "additional",
+        "material": "aerogel + TEG thermal interface",
+        "function": "proposed insulation/energy subsystem, not modeled in Fusion"
+      }
+    ],
+    "footpad": [
+      {
+        "layer": "exterior",
+        "material": "titanium alloy (Ti-6Al-4V)",
+        "function": "ground-contact casing"
+      },
+      {
+        "layer": "middle",
+        "material": "B-UHMWPE + graphene oxide",
+        "function": "proposed shielding insert"
+      },
+      {
+        "layer": "interior",
+        "material": "titanium alloy (Ti-6Al-4V)",
+        "function": "support plate"
+      },
+      {
+        "layer": "additional",
+        "material": "aerogel + TEG interface",
+        "function": "concept only, geometry not validated"
+      }
+    ]
+  },
+  "source_data": {
+    "NASA_RAD": {
+      "file": "MSL_RAD_OBS-L2_517796.txt",
+      "parsed_rows": 601
+    },
+    "TES_albedo_raster": {
+      "name": "Mars_MGS_TES_Albedo_mosaic_global_7410m.tif",
+      "dtype": "uint8",
+      "crs": "ESRI:104905",
+      "scale": "(1.0,)",
+      "offset": "(0.0,)",
+      "min_raw": 1.0,
+      "max_raw": 255.0,
+      "status": "unverified physical scaling (display TIFF); raw only"
+    },
+    "design_numerical_status": {
+      "radiation": "observed environmental time series only",
+      "dome": "radii measured in Fusion",
+      "legs": "six modeled; construction stack is conceptual, thickness not measured",
+      "footpads": "six modeled; area/reflectance geometry not measured",
+      "solar": "no measured broadband or REMS UV series supplied",
+      "TEG": "no validated thermal/electric conversion device data supplied"
+    }
+  },
+  "verified_outputs": {
+    "RAD_observation_period": [
+      "2018-01-01 00:04:44",
+      "2018-01-07 23:50:11"
+    ],
+    "RAD_mean_RTG_corrected_raw_units": 202.01518357737103
+  },
+  "assumption_only": {
+    "composite_formulations": {
+      "12% melanin / 8% GO / 80% H-UHMWPE": [
+        0.12,
+        0.08,
+        0.8
+      ],
+      "15% melanin / 8% GO / 77% H-UHMWPE": [
+        0.15,
+        0.08,
+        0.77
+      ]
+    },
+    "UV_only_illustrative_TEG": {
+      "inputs": {
+        "uv_W_m2": 15.0,
+        "fused_silica_uv_transmittance": 1.0,
+        "composite_uv_absorptance": 0.85,
+        "teg_heat_capture_fraction": 0.6,
+        "teg_conversion_efficiency": 0.05,
+        "teg_active_hours_per_sol": 5.0
+      },
+      "power_W": 1.5020740177265584,
+      "energy_Wh_per_sol": 7.510370088632792,
+      "caution": "Cannot be presented as real NEBUS generation; includes assumed fused silica transmission."
+    },
+    "leg_footpad_ground_reflection": {
+      "cases": {
+        "leg": {
+          "count": 6,
+          "design_stack": [
+            {
+              "layer": "exterior",
+              "material": "titanium alloy (Ti-6Al-4V)",
+              "function": "structural skin"
+            },
+            {
+              "layer": "middle",
+              "material": "B-UHMWPE + graphene oxide",
+              "function": "proposed shield insert"
+            },
+            {
+              "layer": "interior",
+              "material": "titanium alloy (Ti-6Al-4V)",
+              "function": "inner structure"
+            },
+            {
+              "layer": "additional",
+              "material": "aerogel + TEG thermal interface",
+              "function": "proposed insulation/energy subsystem, not modeled in Fusion"
+            }
+          ],
+          "real_CAD_ground_facing_area_m2_each": null,
+          "physical_ground_albedo_at_site": null,
+          "status": "parametric study only; no measured assembly heat or TEG output"
+        },
+        "footpad": {
+          "count": 6,
+          "design_stack": [
+            {
+              "layer": "exterior",
+              "material": "titanium alloy (Ti-6Al-4V)",
+              "function": "ground-contact casing"
+            },
+            {
+              "layer": "middle",
+              "material": "B-UHMWPE + graphene oxide",
+              "function": "proposed shielding insert"
+            },
+            {
+              "layer": "interior",
+              "material": "titanium alloy (Ti-6Al-4V)",
+              "function": "support plate"
+            },
+            {
+              "layer": "additional",
+              "material": "aerogel + TEG interface",
+              "function": "concept only, geometry not validated"
+            }
+          ],
+          "real_CAD_ground_facing_area_m2_each": null,
+          "physical_ground_albedo_at_site": null,
+          "status": "parametric study only; no measured assembly heat or TEG output"
+        }
+      },
+      "solar_W_m2_assumed": 300.0,
+      "view_factor_assumed": 0.25,
+      "surface_absorptance_assumed": 0.5,
+      "ground_albedo_values_assumed": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "area_m2_each_parameter_range": [
+        0.005,
+        0.2
+      ]
+    },
+    "scenario_inputs": {
+      "uv_W_m2": 15.0,
+      "fused_silica_uv_transmittance": 1.0,
+      "composite_uv_absorptance": 0.85,
+      "teg_heat_capture_fraction": 0.6,
+      "teg_conversion_efficiency": 0.05,
+      "teg_active_hours_per_sol": 5.0
+    }
+  },
+  "limitations": [
+    "Dome measured radii differences are NOT certified shell thicknesses.",
+    "No radiation-shield attenuation/dose reduction can be derived from a single RAD environmental time-series.",
+    "TES albedo TIFF may be display-scaled; raw pixel values are not physical albedo without validated encoding.",
+    "Mars-regolith neutron backscatter to legs/footpads needs radiation transport and regolith composition, not albedo.",
+    "Footpad/leg material thickness, areas, thermal contact and TEG performance have not been measured.",
+    "TEG UV-only values below are illustrative and NOT NASA measurements."
+  ]
+}

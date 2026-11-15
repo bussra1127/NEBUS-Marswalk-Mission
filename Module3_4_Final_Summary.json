@@ -1,0 +1,21 @@
+{
+  "module_3_teg_feasibility": {
+    "rems_mean_ground_temp_K": 211.45,
+    "tes_thermal_inertia_SI": 405.0,
+    "hot_reservoir_source": "133.8 kg FR4 electronics waste heat buffered by 6.8 kg PCM ring",
+    "footpad_teg_peak_W": 1.028,
+    "footpad_teg_avg_W": 0.506,
+    "footpad_energy_Wh_per_sol": 12.47,
+    "dome_uv_teg_W": 1.502,
+    "dome_uv_energy_Wh_per_sol": 7.51,
+    "total_hybrid_energy_Wh_per_sol": 19.98
+  },
+  "module_4_habitat_integration": {
+    "total_dry_mass_kg": 7883.1,
+    "mars_total_weight_kN": 29.25,
+    "static_load_per_leg_kN": 4.88,
+    "autonomous_station_demand_Wh_per_sol": 16.0,
+    "net_daily_energy_margin_Wh_per_sol": 3.98,
+    "operational_conclusion": "Hybrid TEG (~20.8 Wh/sol) supports autonomous radiation telemetry and sensor keep-alive; primary crew habitat life-support remains supplied by Mars Base main power."
+  }
+}
