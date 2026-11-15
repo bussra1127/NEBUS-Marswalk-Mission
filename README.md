@@ -15,3 +15,18 @@
 * `nebus_module3_4_final.py` — REMS-anchored (`211.45 K`) thermal cycle, hybrid TEG feasibility, and CAD mass/energy budget integration.
 * `NEBUS_module2_results.json` & `Module3_4_Final_Summary.json` — Structured numerical outputs separating empirical NASA data from parametric engineering models.
 * `README_LIMITATIONS.txt` — Explicit verification boundaries and model assumptions.
+
+## Data Sources, Tools & Academic Acknowledgments
+
+### NASA & Planetary Data Sources
+* **NASA Planetary Data System (PDS):** Mars Science Laboratory (MSL) Curiosity RAD L2 dose-rate time series (`601 observations`), Curiosity REMS ground temperature records (`211.45 K` baseline), Mars Global Surveyor (MGS) TES global thermal inertia (`405 SI` at Gale Crater) & albedo mosaics, and MOLA/HRSC elevation models.
+* **NASA Mars Trek & MRO CTX:** Gale Crater terrain visualization, slope evaluation (`<15°` safe corridor), and high-resolution surface imagery.
+* **USGS Astrogeology Science Center:** Mars Global Geologic Map (SIM 3292) for regional stratigraphic context.
+
+### Engineering & Computational Tools
+* **Autodesk Fusion 360:** 51-body 3D CAD architecture and geometric volume extraction (`7,883.1 kg` dry mass baseline).
+* **SimScale:** Dynamic Finite Element Analysis (FEA) under Martian gravity (`3.71 m/s²`).
+* **Python (`NumPy`, `Matplotlib`, `Rasterio`):** Planetary data ingestion, diurnal thermal modeling, and hybrid TEG energy budget analysis.
+
+### Academic Advisory Acknowledgment
+* We sincerely thank **Prof. Dr. Gökhan Apaydın** (*Karadeniz Technical University — KTÜ, Faculty of Science, Department of Physics, Division of Atomic and Molecular Physics*) for his invaluable academic mentorship, scientific review, and guidance on radiation interaction and shielding physics.
